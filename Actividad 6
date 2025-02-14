@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+ 
+<html>
+<head>
+<title>Unidad 1 | Actividad 6</title>
+
+<link rel="icon" type="image/xicon" href="favicon.ico">
+<meta charset="utf8"/> 
+<meta name="Autor" content="Andrés Fernando García Delgado"/> 
+<meta name="Fecha" content="Jueves 13 de Febrero de 2025"/>
+<meta name="Descripcion" content="Widget"/> 
+</head>
+
+<body>
+    
+<h1>Unidad 1 | Actividad 06 :: Tema (Listas)</h1>
+
+<h3>Siglas</h3>
+
+<details name="siglas">
+       <summary>LAN</summary>
+        <p>Definicion</p>
+</details>
+<details name="siglas">
+       <summary>IP</summary>
+        <p>Definicion</p>
+</details>
+<details name="siglas">
+       <summary>IP</summary>
+        <p>Definicion</p>
+</details>
+<details name="siglas">
+       <summary>IP</summary>
+        <p>Definicion</p>
+</details>
+<details name="siglas">
+       <summary>IP</summary>
+        <p>Definicion</p>
+</details>
+<details name="siglas">
+       <summary>IP</summary>
+        <p>Definicion</p>
+</details>
+<details name="siglas">
+       <summary>IP</summary>
+        <p>Definicion</p>
+</details>
+<details name="siglas">
+       <summary>IP</summary>
+        <p>Definicion</p>
+</details>
+<details name="siglas">
+       <summary>IP</summary>
+        <p>Definicion</p>
+</details>
+<details name="siglas">
+       <summary>IP</summary>
+        <p>Definicion</p>
+</details>
+<details name="siglas">
+       <summary>IP</summary>
+        <p>Definicion</p>
+</details>
+</body>
+
+</html>
