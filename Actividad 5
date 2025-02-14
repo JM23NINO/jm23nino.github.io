@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+ 
+<html>
+<head>
+<title>Unidad 1 | Actividad 5</title>
+
+<link rel="icon" type="image/xicon" href="favicon.ico">
+<meta charset="utf8"/> 
+<meta name="Autor" content="Andrés Fernando García Delgado"/> 
+<meta name="Fecha" content="Jueves 13 de Febrero de 2025"/>
+<meta name="Descripcion" content="Portafolio"/> 
+</head>
+<body>
+    
+<h1>Unidad 1 | Actividad 05 :: Tema (Listas)</h1>
+
+<h3>Siglas</h3>
+
+
+<dl>
+  <dt>LAN</dt>
+  <dd>Local area network (Red de área local).</dd>
+
+  <dt>HTTP</dt>
+  <dd>HyperText Transfer Protocol (Protocolo de transferencia de hipertexto).</dd>
+
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language (Lenguaje de marcado de hipertexto).</dd>
+
+  <dt>DHCP</dt>
+  <dd>Dynamic Host Configuration Protocol (Protocolo de configuración dinámica de host).</dd>
+
+  <dt>SMTP</dt>
+  <dd>Simple Mail Transfer Protocol (Protocolo simple de transferencia de correo).</dd>
+
+  <dt>FTP</dt>
+  <dd>File Transfer Protocol (Protocolo de transferencia de archivos).</dd>
+
+  <dt>POP</dt>
+  <dd>Post Office Protocol (Protocolo de oficina de correos).</dd>
+
+  <dt>IP</dt>
+  <dd>Internet Protocol (Protocolo de Internet).</dd>
+
+  <dt>ICP</dt>
+  <dd>Internet Cache Protocol (Protocolo de caché de Internet).</dd>
+
+  <dt>UDP</dt>
+  <dd>User Datagram Protocol (Protocolo de datagramas de usuario).</dd>
+</dl>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
