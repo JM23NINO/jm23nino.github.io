@@ -1,0 +1,22 @@
+
+<html>
+
+<head>
+<title>Unidad 2 | Actividad 4-1</title>
+
+<link rel="icon" type="image/xicon" href="favicon.ico/">
+<meta charset="utf8"/> 
+<meta name="Autor" content=" Niño Ibarra José Manuel"/> 
+<meta name="Fecha" content="6 de Marzo de 2025"/>
+<meta name="Descripcion" content="Estilos"/> 
+<style type="text/css">
+        p{text-indent: 15px;}
+        a {text-decoration: none; background-color: black; color: white;}
+</style> 
+<link rel="stylesheet" type="text/css" href="Actividad_04.css">
+</head>
+
+<body>
+<h1>Tablas de colores</h1>
+</body>
+</html>
