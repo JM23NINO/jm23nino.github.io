@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copas del Mundo</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      margin: 10px 0;
+    }
+    .collapsible {
+      background-color: #008CBA;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .active, .collapsible:hover {
+      background-color: #005f73;
+    }
+    .content {
+      padding: 20px;
+      display: none;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+ 
+  <h1>Actividad 4-2 || Copas del mundo</h1>
+ 
+  <ul>
+<li>
+<button class="collapsible">1930 - Uruguay</button>
+<div class="content">
+<p><strong>Lugar:</strong> Uruguay</p>
+<p><strong>Fecha:</strong> 13 al 30 de julio de 1930</p>
+<p><strong>Ganador:</strong> Uruguay</p>
+<p><strong>Finalistas:</strong> Uruguay vs Argentina</p>
+<p><strong>Resultado:</strong> 4-2 a favor de Uruguay</p>
+<img src="https://via.placeholder.com/400x200.png?text=Imagen+de+Copa+del+Mundo+1930" alt="Copa del Mundo 1930">
+</div>
+</li>
+<li>
+<button class="collapsible">1934 - Italia</button>
+<div class="content">
+<p><strong>Lugar:</strong> Italia</p>
+<p><strong>Fecha:</strong> 27 de mayo al 10 de junio de 1934</p>
+<p><strong>Ganador:</strong> Italia</p>
+<p><strong>Finalistas:</strong> Italia vs Checoslovaquia</p>
+<p><strong>Resultado:</strong> 2-1 (después de tiempo extra)</p>
+<img src="https://via.placeholder.com/400x200.png?text=Imagen+de+Copa+del+Mundo+1934" alt="Copa del Mundo 1934">
+</div>
+</li>
+<li>
+<button class="collapsible">1950 - Brasil</button>
+<div class="content">
+<p><strong>Lugar:</strong> Brasil</p>
+<p><strong>Fecha:</strong> 16 de junio al 16 de julio de 1950</p>
+<p><strong>Ganador:</strong> Uruguay</p>
+<p><strong>Finalistas:</strong> Brasil vs Uruguay</p>
+<p><strong>Resultado:</strong> 2-1 a favor de Uruguay</p>
+<img src="https://via.placeholder.com/400x200.png?text=Imagen+de+Copa+del+Mundo+1950" alt="Copa del Mundo 1950">
+</div>
+</li>
+<!-- Puedes agregar más ediciones de las Copas del Mundo aquí -->
+</ul>
+ 
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+</script>
+ 
+</body>
+</html>
