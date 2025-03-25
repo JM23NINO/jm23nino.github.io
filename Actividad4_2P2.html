@@ -1,111 +1,280 @@
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Copas del Mundo</title>
-<style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f4f4f4;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    li {
-      margin: 10px 0;
-    }
-    .collapsible {
-      background-color: #008CBA;
-      color: white;
-      padding: 10px;
-      width: 100%;
-      text-align: left;
-      border: none;
-      outline: none;
-      font-size: 18px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .active, .collapsible:hover {
-      background-color: #005f73;
-    }
-    .content {
-      padding: 20px;
-      display: none;
-      background-color: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-top: 10px;
-    }
-</style>
-</head>
-<body>
- 
-  <h1>Actividad 4-2 || Copas del mundo</h1>
- 
-  <ul>
-<li>
-<button class="collapsible">1930 - Uruguay</button>
-<div class="content">
-<p><strong>Lugar:</strong> Uruguay</p>
-<p><strong>Fecha:</strong> 13 al 30 de julio de 1930</p>
-<p><strong>Ganador:</strong> Uruguay</p>
-<p><strong>Finalistas:</strong> Uruguay vs Argentina</p>
-<p><strong>Resultado:</strong> 4-2 a favor de Uruguay</p>
-<img src="https://via.placeholder.com/400x200.png?text=Imagen+de+Copa+del+Mundo+1930" alt="Copa del Mundo 1930">
-</div>
-</li>
-<li>
-<button class="collapsible">1934 - Italia</button>
-<div class="content">
-<p><strong>Lugar:</strong> Italia</p>
-<p><strong>Fecha:</strong> 27 de mayo al 10 de junio de 1934</p>
-<p><strong>Ganador:</strong> Italia</p>
-<p><strong>Finalistas:</strong> Italia vs Checoslovaquia</p>
-<p><strong>Resultado:</strong> 2-1 (después de tiempo extra)</p>
-<img src="https://via.placeholder.com/400x200.png?text=Imagen+de+Copa+del+Mundo+1934" alt="Copa del Mundo 1934">
-</div>
-</li>
-<li>
-<button class="collapsible">1950 - Brasil</button>
-<div class="content">
-<p><strong>Lugar:</strong> Brasil</p>
-<p><strong>Fecha:</strong> 16 de junio al 16 de julio de 1950</p>
-<p><strong>Ganador:</strong> Uruguay</p>
-<p><strong>Finalistas:</strong> Brasil vs Uruguay</p>
-<p><strong>Resultado:</strong> 2-1 a favor de Uruguay</p>
-<img src="https://via.placeholder.com/400x200.png?text=Imagen+de+Copa+del+Mundo+1950" alt="Copa del Mundo 1950">
-</div>
-</li>
-<!-- Puedes agregar más ediciones de las Copas del Mundo aquí -->
-</ul>
- 
-  <script>
-    var coll = document.getElementsByClassName("collapsible");
-    for (var i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-</script>
- 
-</body>
+    <head>
+        <!-- Sección para el encabezado de la página -->
+        <title>Unidad 02 | Actividad No. 04-1</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <meta charset="utf-8">
+        <meta name="Autor" content="José Manuel Niño Ibarra">
+        <meta name="Fecha" content="Viernes 14 de Marzo de 2025">
+        <meta name="Resumen" content="Tipografía">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arbutus&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
+        <style>
+            h2, h1{
+                font-family: "Arbutus", serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            summary{
+                font-family: "Big Shoulders Stencil", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 900;
+                font-style: normal;
+            }
+            th {
+                font-family: "Doto", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 900;
+                font-style: normal;
+                font-variation-settings:
+                    "ROND" 0;
+            }
+            td {
+                font-family: "Big Shoulders Inline", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+            }
+            table{
+                border: 1px solid #C5C5C5;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th{
+                color: black;
+                text-transform: uppercase;
+            }
+            th, td{
+                text-align: left;
+                padding: 10px;
+            }
+            tr:nth-child(even){
+                background-color: #C5C5C5;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Sección para el contenido de la página web-->
+        <h1>Unidad 02 | Actividad 04-2 | Tema: Tipografía</h1>
+        <h2>Algunos de los Tipos de Armas de Halo</h2>
+        <ul>
+            <details>
+                <summary>Cañon de Combustible</summary>
+                <table>
+                    <tr>
+                        <th>Apariencia</th><td>El diseño del Cañón de Combustible es bastante futurista y alienígena, con una estructura que se asemeja a un lanzador de misiles o a una carga de energía.</td><td rowspan="5"><img src="Armas_Halo/Canon_de_Barras_de_Combustible.jpg" width="auto" height="300px"></td>
+                    </tr>
+                    <tr>
+                        <th>Propósito</th><td>Su función principal es lanzar proyectiles explosivos de combustible altamente reactivo, que causan grandes daños tanto a enemigos como a vehículos.</td>
+                    </tr>
+                    <tr>
+                        <th>Mecánica de Disparo</th><td>El Cañón de Combustible dispara proyectiles de energía de combustible, que tienen un fuerte poder explosivo. Estos proyectiles son muy destructivos, lo que lo hace ideal para enfrentarse a grupos de enemigos o vehículos blindados.</td>
+                    </tr>
+                    <tr>
+                        <th>Capacidad y Recarga</th><td>El Cañón de Combustible tiene un cargador limitado con munición de proyectiles explosivos. Aunque su capacidad varía según el juego, típicamente permite disparar entre 10 y 15 proyectiles antes de que sea necesario recargar.</td>
+                    </tr>
+                    <tr>
+                        <th>Debilidad</th><td>Aunque es un arma poderosa, tiene la desventaja de que sus proyectiles son relativamente lentos en comparación con otras armas más rápidas, como los rifles de asalto. Esto puede hacer que sea más difícil de usar en combates a larga distancia o contra enemigos móviles.</td>
+                    </tr>
+                </table>
+            </details>
+            <br>
+            <details>
+                <summary>Espada de Energía</summary>
+                <table>
+                    <tr>
+                        <th>Apariencia</th><td>La Espada de Energía es un arma cuerpo a cuerpo icónica de los Sangheili (Élite). Tiene un diseño elegante con dos hojas curvas de plasma brillante, generalmente azul, aunque puede variar en color. La empuñadura es metálica y compacta, con un diseño ergonómico para el agarre de los élites.</td><td rowspan="5"><img src="Armas_Halo/Espada_de_Energia.jpg" width="auto" height="300px"></td>
+                    </tr>
+                    <tr>
+                        <th>Propósito</th><td>Diseñada para el combate cuerpo a cuerpo, la Espada de Energía es letal en enfrentamientos cercanos. Es usada por los élites y algunos jugadores en multijugador para eliminar enemigos con rapidez y sigilo.</td>
+                    </tr>
+                    <tr>
+                        <th>Mecánica de Disparo</th><td>No dispara proyectiles, sino que usa una mecánica de "lunging" (embestida), permitiendo que el usuario se impulse rápidamente hacia un enemigo en el rango efectivo para asestar un golpe mortal. Un ataque directo suele ser un asesinato instantáneo.</td>
+                    </tr>
+                    <tr>
+                        <th>Capacidad y Recarga</th><td>Funciona con una batería de energía que se agota con cada golpe. No puede recargarse, solo reemplazarse por otra espada nueva. Generalmente tiene una capacidad de unos 10-15 ataques letales antes de agotarse.</td>
+                    </tr>
+                    <tr>
+                        <th>Debilidad</th><td>La Espada de Energía es extremadamente poderosa en combate cuerpo a cuerpo, pero su mayor debilidad es su alcance limitado, lo que la hace prácticamente inútil contra enemigos a distancia. Además, el brillo de su hoja delata fácilmente la posición del portador, lo que puede hacer que sea detectado antes de atacar. También depende de una batería con una cantidad finita de golpes, y una vez agotada, el arma se vuelve completamente inservible. En combate contra enemigos con escudos altos o vehículos blindados, puede ser poco efectiva si el usuario no logra un golpe certero en un punto vulnerable.</td>
+                    </tr>
+                </table>
+            </details>
+            <br>
+            <details>
+                <summary>Pistolas Needler</summary>
+                <table>
+                    <tr>
+                        <th>Apariencia</th><td>Las Pistolas Needler son armas de tecnología Covenant con un diseño biomecánico característico. Tienen un cuerpo curvado de color púrpura y detalles en tonos oscuros, con varias agujas rosadas de cristal superdenso sobresaliendo en la parte superior del arma. Estas agujas brillan y se regeneran automáticamente a medida que se disparan.</td><td rowspan="5"><img src="Armas_Halo/H2A_T33Needler.jpg" width="auto" height="300px"></td>
+                    </tr>
+                    <tr>
+                        <th>Propósito</th><td>Son armas diseñadas para combates a corta y media distancia, especialmente efectivas contra enemigos con escudos bajos o sin protección. Su función principal es disparar agujas teledirigidas que se clavan en el enemigo y, tras un cierto número de impactos, detonan causando una explosión letal.</td>
+                    </tr>
+                    <tr>
+                        <th>Mecánica de Disparo</th><td>Disparan proyectiles en forma de agujas cristalinas con una leve capacidad de auto-seguimiento, lo que permite que los disparos curven ligeramente hacia los enemigos. Si un objetivo recibe suficientes agujas en rápida sucesión, estas detonan simultáneamente en una explosión devastadora.</td>
+                    </tr>
+                    <tr>
+                        <th>Capacidad y Recarga</th><td>Cada Needler tiene un cargador que suele contener 30 agujas y su velocidad de recarga es relativamente rápida. No requiere baterías, ya que utiliza proyectiles físicos, lo que permite que la munición sea reemplazada en combate sin restricciones energéticas.</td>
+                    </tr>
+                    <tr>
+                        <th>Debilidad</th><td>A pesar de su capacidad de rastreo y su letal explosión, las Pistolas Needler tienen dificultades contra enemigos con escudos altos, ya que las agujas pueden no adherirse y rebotar. Además, en espacios abiertos, los proyectiles pueden ser esquivados fácilmente si el enemigo se mueve rápidamente o está demasiado lejos. También tienen una cadencia de disparo moderada y una velocidad de proyectil relativamente lenta en comparación con armas de proyectiles instantáneos, lo que las hace menos efectivas en enfrentamientos a larga distancia.</td>
+                    </tr>
+                </table>
+            </details>
+            <br>
+            <details>
+                <summary>Aguijoneador Pesado</summary>
+                <table>
+                    <tr>
+                        <th>Apariencia</th><td>El Aguijoneador Pesado es una versión más grande y letal del clásico Needler. Su diseño mantiene la estética biomecánica del Covenant, con un cuerpo robusto de color púrpura oscuro y múltiples agujas de cristal rosado sobresaliendo de la parte superior. Es más voluminoso que el Needler estándar, lo que le da una apariencia imponente.</td><td rowspan="5"><img src="Armas_Halo/Aguijoneador_Pesado.jpg" width="auto" height="300px"></td>
+                    </tr>
+                    <tr>
+                        <th>Propósito</th><td>Diseñado para ser un arma pesada de alto poder destructivo, el Aguijoneador Pesado dispara agujas explosivas de mayor tamaño y daño que su versión estándar. Es especialmente efectivo contra enemigos con armadura o grupos de enemigos, ya que sus proyectiles no solo perforan, sino que generan explosiones más potentes.</td>
+                    </tr>
+                    <tr>
+                        <th>Mecánica de Disparo</th><td>A diferencia del Needler convencional, el Aguijoneador Pesado dispara más lentamente pero con proyectiles más grandes, que tienen una mayor capacidad de rastreo y causan explosiones aún más devastadoras. Su efecto de detonación sigue funcionando cuando suficientes agujas impactan al mismo enemigo, pero cada proyectil por sí solo también causa un daño significativo.</td>
+                    </tr>
+                    <tr>
+                        <th>Capacidad y Recarga</th><td>Su cargador es más grande que el de un Needler estándar, pero su cadencia de fuego es más baja para equilibrar su poder. Suele contener 20 a 25 agujas, y la recarga es más lenta debido al tamaño y peso del arma. Al igual que otras armas Covenant, utiliza munición de cristal y no puede recargarse con baterías.</td>
+                    </tr>
+                    <tr>
+                        <th>Debilidad</th><td>A pesar de su alto daño, el Aguijoneador Pesado es menos efectivo contra enemigos que se mueven rápidamente, ya que sus proyectiles tienen una velocidad menor que otras armas pesadas. Además, en combate a larga distancia pierde efectividad, ya que su capacidad de rastreo no es perfecta y los disparos pueden desviarse si el objetivo está demasiado lejos. También es un arma más pesada, lo que puede afectar la movilidad del usuario al usarla en combate intenso.</td>
+                    </tr>
+                </table>
+            </details>
+            <br>
+            <details>
+                <summary>Sistema de Arma de Combate Individual MA5D</summary>
+                <table>
+                    <tr>
+                        <th>Apariencia</th><td>El MA5D es un rifle de asalto estándar utilizado por la UNSC. Su diseño es robusto y futurista, con un cuerpo metálico en tonos grises y negros, acompañado de detalles en amarillo o verde militar. Posee una pantalla digital en el lateral que muestra la cantidad de munición restante, característica clásica de la familia MA5.</td><td rowspan="5"><img src="Armas_Halo/H5G_Render_AssaultRifle.jpg" width="auto" height="300px"></td>
+                    </tr>
+                    <tr>
+                        <th>Propósito</th><td>Diseñado como un arma de fuego versátil para infantería, el MA5D se usa principalmente en combates a corta y media distancia. Es ideal para enfrentamientos en los que la rapidez y la precisión moderada son más importantes que la potencia individual de cada disparo.</td>
+                    </tr>
+                    <tr>
+                        <th>Mecánica de Disparo</th><td>Funciona como un rifle de asalto totalmente automático, disparando proyectiles de alta velocidad a una cadencia constante. Su retroceso es moderado, lo que lo hace adecuado para ráfagas cortas o fuego sostenido en combates cuerpo a cuerpo.</td>
+                    </tr>
+                    <tr>
+                        <th>Capacidad y Recarga</th><td>Posee un cargador de 36 rondas de munición estándar de 7.62×51 mm y una velocidad de recarga rápida. A diferencia de las armas Covenant, no utiliza baterías ni necesita recargar energía, sino que depende únicamente de la munición disponible.</td>
+                    </tr>
+                    <tr>
+                        <th>Debilidad</th><td>A pesar de su confiabilidad y versatilidad, el MA5D tiene dificultades en combates de larga distancia debido a su dispersión de balas, lo que reduce la precisión a mayores rangos. Su daño por disparo es relativamente bajo en comparación con armas más especializadas, lo que lo hace menos efectivo contra enemigos con armadura pesada o escudos de alta capacidad. Además, su alta cadencia de disparo puede hacer que se quede sin munición rápidamente si no se usa con control.</td>
+                    </tr>
+                </table>
+            </details>
+            <br>
+            <details>
+                <summary>Lanzador de Fragmentos Patrón-Posu'gelka</summary>
+                <table>
+                    <tr>
+                        <th>Apariencia</th><td>Este arma Banished tiene un diseño agresivo y pesado, con una estructura metálica oscura, detalles en rojo y una apariencia brutalista típica del armamento de los Desterrados. Posee un cañón grande y recargado de tecnología alienígena, con varias aberturas que expulsan fragmentos explosivos al disparar.</td><td rowspan="5"><img src="Armas_Halo/HInf_-_Aguijoneador.jpg" width="auto" height="300px"></td>
+                    </tr>
+                    <tr>
+                        <th>Propósito</th><td>Diseñado para el combate a corta y media distancia, el Lanzador de Fragmentos dispara proyectiles que se fragmentan en múltiples explosivos secundarios, causando un daño masivo en un área amplia. Es ideal para eliminar grupos de enemigos o para desgastar escudos con rapidez.</td>
+                    </tr>
+                    <tr>
+                        <th>Mecánica de Disparo</th><td>Dispara proyectiles explosivos que, al impactar, se dividen en fragmentos más pequeños que rebotan y detonan tras un corto tiempo. Esto lo convierte en un arma impredecible y difícil de esquivar en espacios cerrados.</td>
+                    </tr>
+                    <tr>
+                        <th>Capacidad y Recarga</th><td>Su cargador es limitado, generalmente con 6 a 8 proyectiles antes de necesitar una recarga. El proceso de recarga es más lento en comparación con otras armas Banished, lo que obliga a los jugadores a disparar con precisión y administrar bien la munición.</td>
+                    </tr>
+                    <tr>
+                        <th>Debilidad</th><td>Aunque su poder destructivo es alto, el Lanzador de Fragmentos sufre en combates a larga distancia, ya que sus proyectiles no tienen un alcance eficiente y su fragmentación puede ser menos efectiva en espacios abiertos. Además, su velocidad de recarga es lenta, lo que deja vulnerable al usuario en momentos críticos. También, si el enemigo se mueve rápido o está en terreno elevado, los fragmentos pueden no alcanzar el objetivo deseado, reduciendo su efectividad.</td>
+                    </tr>
+                </table>
+            </details>
+            <br>
+            <details>
+                <summary>Cañón de Aceleración Magnética</summary>
+                <table>
+                    <tr>
+                        <th>Apariencia</th><td>El Cañón de Aceleración Magnética, o MAC, es un arma de gran tamaño utilizada principalmente en naves y estaciones espaciales de la UNSC. Su diseño es imponente, con una estructura alargada y reforzada, compuesta por enormes bobinas electromagnéticas a lo largo del cañón. Su apariencia varía dependiendo de la versión, pero en general, se asemeja a un gigantesco cañón de riel montado en naves o bases terrestres.</td><td rowspan="5"><img src="Armas_Halo/Magnetic_Accelerator_Cannon-1-.jpg" width="500px" height="300px"></td>
+                    </tr>
+                    <tr>
+                        <th>Propósito</th><td>Diseñado para el combate espacial y el ataque contra objetivos masivos, el MAC es una de las armas más destructivas de la UNSC. Su propósito principal es atravesar el blindaje de naves enemigas con proyectiles cinéticos de alta velocidad, causando daños catastróficos con un solo impacto.</td>
+                    </tr>
+                    <tr>
+                        <th>Mecánica de Disparo</th><td>Utiliza tecnología electromagnética para acelerar un proyectil de tungsteno u otro material denso a velocidades extremas, impactando con una energía cinética devastadora. A diferencia de los láseres o misiles, el MAC no depende de explosivos, sino de la pura velocidad e impacto del proyectil para destruir su objetivo.</td>
+                    </tr>
+                    <tr>
+                        <th>Capacidad y Recarga</th><td>La capacidad y velocidad de recarga dependen del tipo de MAC. Las versiones más grandes, como las montadas en estaciones orbitales, pueden tardar varios minutos en recargar, mientras que los modelos más pequeños, como los instalados en naves de guerra, pueden disparar con mayor frecuencia. La recarga involucra la alineación y carga de un nuevo proyectil en la cámara, además de la acumulación de energía en los sistemas de aceleración.</td>
+                    </tr>
+                    <tr>
+                        <th>Debilidad</th><td>A pesar de su increíble poder destructivo, el MAC tiene limitaciones significativas. Su cadencia de disparo es lenta, lo que lo hace menos efectivo en combates prolongados si el primer disparo no logra destruir al objetivo. También requiere una gran cantidad de energía para disparar, lo que significa que puede sobrecargar los sistemas de la nave o estación si se usa continuamente. Además, debido a que es un arma de trayectoria lineal, los disparos pueden ser esquivados por naves más ágiles o calculados para ser contrarrestados con maniobras evasivas.</td>
+                    </tr>
+                </table>
+            </details>
+            <br>
+            <details>
+                <summary>Sistema de Arma de Defensa Personal M6D</summary>
+                <table>
+                    <tr>
+                        <th>Apariencia</th><td>La M6D es una pistola semiautomática de gran tamaño utilizada por la UNSC. Su diseño es robusto y funcional, con un cuerpo metálico en tonos grises y negros, empuñadura ergonómica y un cañón alargado. Cuenta con una mira telescópica integrada en la parte superior, lo que le permite ser efectiva tanto en combate cercano como a media distancia.</td><td rowspan="5"><img src="Armas_Halo/Magnum_M6D_H5G.jpg" width="auto" height="300px"></td>
+                    </tr>
+                    <tr>
+                        <th>Propósito</th><td>Diseñada como un arma de respaldo para soldados de la UNSC, la M6D es ideal para combate cuerpo a cuerpo y como opción secundaria en situaciones donde las armas principales no están disponibles. Su gran poder de penetración y precisión la hacen una opción fiable incluso contra enemigos con armadura ligera o escudos débiles.</td>
+                    </tr>
+                    <tr>
+                        <th>Mecánica de Disparo</th><td>Es una pistola semiautomática que dispara proyectiles de alto calibre (.50 Magnum). Su gran poder de impacto permite eliminar enemigos con pocos disparos, especialmente si se apunta a la cabeza. Además, su mira telescópica proporciona mejor precisión en enfrentamientos a media distancia.
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Capacidad y Recarga</th><td>La M6D cuenta con un cargador de 12 balas, lo que le da una capacidad decente para un arma secundaria. La recarga es rápida y eficiente, permitiendo al usuario mantenerse en combate sin perder demasiado tiempo.</td>
+                    </tr>
+                    <tr>
+                        <th>Debilidad</th><td>A pesar de su potencia y precisión, la M6D no es la mejor opción en combates a larga distancia debido a la caída de sus proyectiles y su limitada capacidad de munición en comparación con rifles o armas automáticas. Además, su cadencia de disparo depende de la velocidad del usuario al presionar el gatillo, lo que puede hacer que no sea tan efectiva contra enemigos con fuego automático sostenido. También puede perder efectividad contra oponentes con escudos altos, requiriendo múltiples disparos para romper la defensa antes de causar daño real.</td>
+                    </tr>
+                </table>
+            </details>
+            <br>
+            <details>
+                <summary>Haz Centinela</summary>
+                <table>
+                    <tr>
+                        <th>Apariencia</th><td>El Haz Centinela es un dron flotante de combate de forma esférica, con una estructura metálica de color plateado y detalles azules o rojos según la versión. En el centro, tiene una lente o "ojo" que emite un resplandor y puede proyectar energía. Su diseño es minimalista pero efectivo, adaptado para volar y maniobrar rápidamente en combate.</td><td rowspan="5"><img src="Armas_Halo/Rayo_Centinela_H2A.jpg" width="auto" height="300px"></td>
+                    </tr>
+                    <tr>
+                        <th>Propósito</th><td>El Haz Centinela fue creado como un sistema de defensa automatizado para proteger instalaciones y zonas importantes de los Forerunners, y posteriormente se usó como una herramienta de combate en diversas situaciones. Su función principal es la vigilancia y la eliminación de amenazas, ya sea atacando a enemigos orgánicos o protegiendo áreas clave de las fuerzas invasoras.</td>
+                    </tr>
+                    <tr>
+                        <th>Mecánica de Disparo</th><td>El Haz Centinela utiliza un rayo de energía concentrada, similar al láser, que dispara de forma continua o en ráfagas rápidas. Este rayo puede causar daños significativos a las unidades biológicas y mecánicas, haciendo que sea un enemigo formidable en combate. También puede maniobrar rápidamente para evitar ser alcanzado mientras ataca.</td>
+                    </tr>
+                    <tr>
+                        <th>Capacidad y Recarga</th><td>El Haz Centinela tiene una capacidad de energía limitada, lo que significa que después de disparar durante un tiempo, necesita recargarse o alejarse para evitar la sobrecarga. A pesar de esto, su recarga es bastante rápida en comparación con otras armas energéticas, permitiéndole seguir participando en combate sin muchos retrasos.</td>
+                    </tr>
+                    <tr>
+                        <th>Debilidad</th><td>Aunque los Haz Centinelas son muy efectivos en combate, tienen una resistencia limitada a ataques directos, ya que no poseen una defensa de escudo como otras unidades. Son vulnerables a disparos concentrados, especialmente si se les ataca en grupos o en puntos débiles de su estructura. Además, debido a que dependen de su energía para atacar, se pueden desactivar o neutralizar si se interrumpe su fuente de poder o se agota su munición. También son menos eficientes en combate cercano, donde su habilidad para maniobrar y disparar rápidamente se ve limitada.</td>
+                    </tr>
+                </table>
+            </details>
+            <br>
+            <details>
+                <summary>Arma de Energía Dirigida Z-250</summary>
+                <table>
+                    <tr>
+                        <th>Apariencia</th><td>El Z-250 es un arma de energía compacta, con un diseño futurista y elegante. Posee una estructura metálica en tonos oscuros, con detalles brillantes en azul y verde. La empuñadura es ergonómica, permitiendo un buen agarre para el usuario, mientras que el cañón tiene una forma delgada pero robusta, con una ranura visible que canaliza el rayo de energía.</td><td rowspan="5"><img src="Armas_Halo/Rifle_de_Luz_H5G.jpg" width="500px" height="250px"></td>
+                    </tr>
+                    <tr>
+                        <th>Propósito</th><td>Diseñada para desintegrar rápidamente los objetivos con un rayo de energía concentrada, el Z-250 se utiliza principalmente en situaciones de combate de precisión. Es especialmente eficaz contra objetivos con escudos o blindaje pesado, ya que su energía concentrada puede perforar rápidamente las defensas y causar daño significativo.</td>
+                    </tr>
+                    <tr>
+                        <th>Mecánica de Disparo</th><td>La Z-250 dispara un rayo de energía que se puede dirigir con precisión hacia el objetivo deseado. Este rayo es capaz de atravesar escudos y causar daños sustanciales en unidades blindadas o a gran escala. El arma tiene un sistema de disipación de calor, lo que permite disparos continuos, pero después de varios disparos, necesita un breve tiempo de enfriamiento.</td>
+                    </tr>
+                    <tr>
+                        <th>Capacidad y Recarga</th><td>El Z-250 utiliza una fuente de energía limitada que le permite realizar una cantidad considerable de disparos antes de necesitar recargarse. La recarga de energía es relativamente rápida, pero no es infinita, por lo que los usuarios deben ser estratégicos con su uso para evitar quedarse sin energía en medio del combate. La capacidad total de disparos antes de recargar depende de la intensidad de uso, pero en condiciones óptimas suele ofrecer entre 10 y 15 disparos de alta energía antes de necesitar un descanso.</td>
+                    </tr>
+                    <tr>
+                        <th>Debilidad</th><td>Aunque es muy poderosa contra enemigos con escudos o blindaje, la Z-250 tiene una cadencia de disparo lenta y no es eficaz a largas distancias debido a su enfoque de precisión y energía dirigida. Además, su limitado suministro de energía y la necesidad de enfriamiento entre disparos rápidos la hacen vulnerable si no se usa con cuidado. En combates prolongados, puede dejar al usuario expuesto si no gestiona bien la recarga. También tiene una baja capacidad de munición en comparación con otras armas, lo que requiere recargas frecuentes en situaciones de alta intensidad.</td>
+                    </tr>
+                </table>
+            </details>
+        </ul>
+    </body>
 </html>
