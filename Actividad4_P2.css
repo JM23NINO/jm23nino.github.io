@@ -1,0 +1,44 @@
+h1{
+    border: 2px solid tomato;
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "ELGR" 1,
+        "ELSH" 2;
+}
+
+ul{
+    border-width: 5px;
+    border-style: dotted;
+    border-color: dodgerblue;
+}
+
+li{
+    border-width: 2.5px;
+    border-style: dashed;
+    border-color: lightcoral;
+}
+
+p{
+    border-radius: 10px;
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: darkmagenta;
+}
+
+body{
+    background-color: gray;
+    background-size: 560px;
+    background-image: url("vk4slai8vcf81.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings:
+        "ROND" 0;
+}
