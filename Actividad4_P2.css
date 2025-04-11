@@ -11,13 +11,13 @@ h1{
 
 ul{
     border-width: 5px;
-    border-style: dotted;
-    border-color: dodgerblue;
+    border-style: sloid;
+    border-color: lightcoral;
 }
 
 li{
     border-width: 2.5px;
-    border-style: dashed;
+    border-style: solid;
     border-color: lightcoral;
 }
 
