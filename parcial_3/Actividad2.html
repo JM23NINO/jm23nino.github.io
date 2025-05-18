@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Sección para el encabezado de la página -->
+        <title>Unidad 03 | Actividad No. 02</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <meta charset="utf-8">
+        <meta name="Autor" content="José Manuel Niño Ibarra">
+        <meta name="Fecha" content="Martes 29 de Abril de 2025">
+        <meta name="Resumen" content="Alert, Confirm y Prompt">
+        <script>
+            if (window.confirm("Esta página utiliza cookies.\n\nDesea acceder?")) {
+                window.alert("Bienvenido");
+            }
+            else {
+                window.location.assign("https://www.google.com.mx");
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Sección para el contenido de la página web-->
+        <h1>Unidad 03 | Actividad 02 | Tema: Alert, Confirm y Prompt</h1>
+        <script>
+            let nombre = window.prompt("Dime tu nombre:");
+            document.write("Hola " + nombre + " bienvenido al sitio web...");
+        </script>
+    </body>
+</html>
