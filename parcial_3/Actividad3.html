@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Sección para el encabezado de la página -->
+        <title>Unidad 03 | Actividad No. 03</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <meta charset="utf-8">
+        <meta name="Autor" content="Jose manuel niño ibarra">
+        <meta name="Fecha" content="Miércoles 30 de Abril de 2025">
+        <meta name="Resumen" content="JavaScript">
+    </head>
+    <body>
+        <!-- Sección para el contenido de la página web-->
+        <h1>Unidad 03 | Actividad 03 | Tema: JavaScript</h1>
+        <script>
+            let opc = Number(window.prompt("Elige una de las opciones:\n1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir"));
+            let val_1 = Number(window.prompt("¿Cuál es el primer valor?"));
+            let val_2 = Number(window.prompt("¿Cuál es el segundo valor?"));
+            switch(opc){
+                case 1:
+                    document.write("<h3>Operación Suma</h3>");
+                    document.write("<code>" + val_1 + "+" + val_2 + "=" + (val_1 + val_2) + "</code>");
+                break;
+                case 2:
+                    document.write("<h3>Operación Resta</h3>");
+                    document.write("<code>" + val_1 + "-" + val_2 + "=" + (val_1 - val_2) + "</code>");
+                break;
+                case 3:
+                    document.write("<h3>Operación Multiplicación</h3>");
+                    document.write("<code>" + val_1 + "×" + val_2 + "=" + (val_1 * val_2) + "</code>");
+                break;
+                case 4:
+                    document.write("<h3>Operación División</h3>");
+                    document.write("<code>" + val_1 + "÷" + val_2 + "=" + (val_1 / val_2) + "</code>");
+                break;
+            }
+        </script>
+    </body>
+</html>
