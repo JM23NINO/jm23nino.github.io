@@ -32,6 +32,14 @@
   <!-- Navbar -->
   <header id="navbar-container"></header>
   <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  });
+    
     fetch("navbar.html")
       .then(res => res.text())
       .then(data => {
