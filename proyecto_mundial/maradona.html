@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es" data-bs-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Diego Maradona, leyenda del fútbol mundial">
+  <meta name="author" content="FIFA Fan Web">
+  <title>Maradona</title>
+  <link rel="icon" type="image/x-icon" href="icon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- Barra superior -->
+  <header id="navbar-container"></header>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  </script>
+
+  <!-- Contenido principal -->
+  <main class="section container">
+    <h1>Diego Maradona: El Diez eterno</h1>
+    <p>Diego Armando Maradona fue una figura única en la historia del fútbol. Nacido en Argentina en 1960, su talento desbordante, personalidad polémica y logros deportivos lo convirtieron en una leyenda universal del deporte.</p>
+
+    <h3>Logros principales</h3>
+    <ul>
+      <li>Campeón del Mundo en México 1986</li>
+      <li>Subcampeón en Italia 1990</li>
+      <li>Considerado uno de los mejores jugadores de todos los tiempos</li>
+      <li>Autor del "Gol del Siglo" y la "Mano de Dios"</li>
+    </ul>
+
+    <img src="imagenesp/maradona.jpg" alt="Maradona levantando la Copa del Mundo en 1986" class="img-fluid my-4">
+
+    <table class="table custom-table table-bordered text-center">
+      <thead>
+        <tr><th>Año</th><th>Evento</th><th>Resultado</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1986</td><td>Mundial en México</td><td>Campeón</td></tr>
+        <tr><td>1990</td><td>Mundial en Italia</td><td>Subcampeón</td></tr>
+      </tbody>
+    </table>
+
+    <p>Maradona dejó una huella imborrable en el fútbol mundial. Fue ídolo en Nápoles, Boca Juniors y la selección argentina. Su impacto trascendió el deporte, convirtiéndose en un símbolo cultural y social.</p>
+
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/1wVho3I0NtU" title="Tributo a Maradona" allowfullscreen class="my-4"></iframe>
+  </main>
+
+  <footer class="container mt-5">
+    <hr>
+    <p class="float-end"><a href="#">Volver arriba</a></p>
+    <p>&copy; 2025 FIFA Fan Web &middot; <a href="#">Privacidad</a> &middot; <a href="#">Términos</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+/* carousel.css */
+.carousel-caption {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  text-shadow: 1px 1px 3px black;
+}
+
+.carousel-caption h1 {
+  font-size: 2.5rem;
+  color: #f8f9fa;
+}
+
+.carousel-caption p {
+  color: #ddd;
+  font-size: 1.2rem;
+}
+
+body {
+  background-color: #e8f5e9; /* fondo verdoso tipo campo */
+}
+
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: white;
+}

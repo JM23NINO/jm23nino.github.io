@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es" data-bs-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lionel Messi, leyenda viva del fútbol">
+  <meta name="author" content="FIFA Fan Web">
+  <title>Messi</title>
+  <link rel="icon" type="image/x-icon" href="icon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- Barra superior -->
+  <header id="navbar-container"></header>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  </script>
+
+  <!-- Contenido principal -->
+  <main class="section container">
+    <h1>Lionel Messi: El genio de Rosario</h1>
+    <p>Lionel Andrés Messi ha sido considerado por muchos como el mejor futbolista de todos los tiempos. Nacido en Rosario, Argentina, en 1987, su carrera ha estado marcada por su talento, humildad y logros impresionantes a nivel de clubes y selección.</p>
+
+    <h3>Logros principales</h3>
+    <ul>
+      <li>Campeón del Mundo en Qatar 2022</li>
+      <li>Ganador de 7 Balones de Oro</li>
+      <li>Múltiples títulos con FC Barcelona y PSG</li>
+      <li>Máximo goleador histórico de la selección argentina</li>
+    </ul>
+
+    <img src="imagenesp/messi.jpg" alt="Messi levantando la Copa Mundial 2022" class="img-fluid my-4">
+
+    <table class="table custom-table table-bordered text-center">
+      <thead>
+        <tr><th>Año</th><th>Evento</th><th>Resultado</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2014</td><td>Mundial en Brasil</td><td>Subcampeón</td></tr>
+        <tr><td>2021</td><td>Copa América</td><td>Campeón</td></tr>
+        <tr><td>2022</td><td>Mundial en Catar</td><td>Campeón</td></tr>
+      </tbody>
+    </table>
+
+    <p>Messi ha emocionado al mundo entero con su juego y liderazgo. Su legado sigue creciendo dentro y fuera de las canchas, siendo un referente del deporte y modelo a seguir para futuras generaciones.</p>
+
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/zXT8WZ3fDYI" title="Tributo a Lionel Messi" allowfullscreen class="my-4"></iframe>
+  </main>
+
+  <footer class="container mt-5">
+    <hr>
+    <p class="float-end"><a href="#">Volver arriba</a></p>
+    <p>&copy; 2025 FIFA Fan Web &middot; <a href="#">Privacidad</a> &middot; <a href="#">Términos</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

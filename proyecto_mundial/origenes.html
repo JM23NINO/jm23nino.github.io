@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es" data-bs-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Orígenes de la FIFA">
+  <meta name="author" content="FIFA Fan Web">
+  <title>Orígenes de la FIFA</title>
+  <link rel="icon" type="image/x-icon" href="icon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- Barra superior -->
+  <header id="navbar-container"></header>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  </script>
+
+  <!-- Contenido principal -->
+  <main class="section container">
+    <h1 class="text-center mb-4">Orígenes de la FIFA</h1>
+    <h2>Fundación y propósito</h2>
+    <p>La Federación Internacional de Fútbol Asociación (FIFA) fue establecida el 21 de mayo de 1904 en París. Su objetivo principal era estandarizar las reglas del fútbol y fomentar la cooperación internacional. Los países fundadores incluyeron Francia, Bélgica, Dinamarca, Países Bajos, España, Suecia y Suiza, quienes compartían la visión de un deporte organizado globalmente.</p>
+
+    <p>En aquella época, el fútbol ya se jugaba ampliamente en Europa, pero las reglas no estaban unificadas, lo que generaba confusión y conflictos entre equipos de diferentes países. La fundación de la FIFA ayudó a establecer un marco común que permitió la organización de competiciones internacionales y la expansión del deporte.</p>
+
+    <img src="imagenesp/fundacion_fifa.jpg" alt="Firma del acta de fundación de la FIFA en 1904" class="img-fluid my-4">
+
+    <h3>Primeros años de historia</h3>
+    <p>La FIFA experimentó un crecimiento constante desde su fundación. Su primera gran hazaña fue organizar la Copa Mundial de 1930 en Uruguay. Esto no solo consolidó su papel en el fútbol mundial, sino que sentó las bases para el torneo más visto y celebrado del planeta.</p>
+
+    <p>Durante la década de 1920, la FIFA enfrentó desafíos financieros y logísticos, pero su perseverancia permitió el desarrollo de un sistema sólido de federaciones afiliadas. En 1928, se aprobó la creación de la Copa Mundial, la cual marcaría un antes y un después en la historia del deporte.</p>
+
+    <ul>
+      <li><strong>Fundación:</strong> 21 de mayo de 1904</li>
+      <li><strong>Sede inicial:</strong> París, Francia</li>
+      <li><strong>Primer presidente:</strong> Robert Guérin</li>
+      <li><strong>Miembros fundadores:</strong> Francia, Bélgica, Dinamarca, Países Bajos, España, Suecia, Suiza</li>
+    </ul>
+
+    <img src="imagenesp/primer_presidente.jpg" alt="Robert Guérin, primer presidente de la FIFA" class="img-fluid my-4">
+
+    <h3>Eventos clave</h3>
+    <table class="table custom-table table-hover">
+      <thead>
+        <tr>
+          <th>Año</th>
+          <th>Evento Clave</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1904</td>
+          <td>Fundación de la FIFA en París</td>
+        </tr>
+        <tr>
+          <td>1928</td>
+          <td>Aprobación para organizar la Copa Mundial</td>
+        </tr>
+        <tr>
+          <td>1930</td>
+          <td>Primera Copa Mundial en Uruguay</td>
+        </tr>
+        <tr>
+          <td>1954</td>
+          <td>FIFA traslada su sede a Zúrich, Suiza</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Influencia y legado</h3>
+    <p>Hoy en día, la FIFA es una de las organizaciones deportivas más influyentes del mundo. Supervisa competiciones en todos los continentes y continúa promoviendo el fútbol como una herramienta para la unidad, el respeto y el desarrollo social. Con más de 200 federaciones nacionales afiliadas, la FIFA ha transformado el fútbol en un fenómeno global que trasciende culturas y fronteras.</p>
+
+    <p>Además de los torneos, la FIFA impulsa programas de desarrollo juvenil, formación de árbitros, promoción del fútbol femenino y lucha contra la discriminación y el racismo en el deporte. Su sede en Zúrich es un centro neurálgico desde donde se coordinan todas estas acciones.</p>
+
+    <iframe width="100%" height="315" src="https://youtu.be/uosL0HG0ylM?si=feB2GVDR9XZqKqTp" title="Historia de la FIFA" allowfullscreen class="my-4"></iframe>
+  </main>
+
+  <footer class="container mt-5">
+    <hr>
+    <p class="float-end"><a href="#">Volver arriba</a></p>
+    <p>&copy; 2025 FIFA Fan Web &middot; <a href="#">Privacidad</a> &middot; <a href="#">Términos</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

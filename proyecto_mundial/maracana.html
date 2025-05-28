@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es" data-bs-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Estadio Maracaná - Historia y eventos">
+  <meta name="author" content="FIFA Fan Web">
+  <title>Estadio Maracaná</title>
+  <link rel="icon" type="image/x-icon" href="icon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header id="navbar-container"></header>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  </script>
+
+  <main class="section container">
+    <h1>Estadio Maracaná</h1>
+    <p>Ubicado en Río de Janeiro, Brasil, el Estadio Maracaná es uno de los estadios más famosos del mundo. Ha sido escenario de eventos inolvidables como finales de la Copa Mundial y Juegos Olímpicos.</p>
+
+    <h3>Eventos históricos</h3>
+    <ul>
+      <li>Final de la Copa Mundial 1950 – Uruguay derrota a Brasil en el "Maracanazo"</li>
+      <li>Final de la Copa Mundial 2014 – Alemania vence a Argentina</li>
+      <li>Ceremonias de apertura y clausura de los Juegos Olímpicos Río 2016</li>
+    </ul>
+
+    <img src="imagenesp/maracana.jpg" alt="Vista del Estadio Maracaná durante un partido" class="img-fluid my-4">
+
+    <table class="table custom-table table-bordered text-center">
+      <thead>
+        <tr><th>Dato</th><th>Valor</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Ubicación</td><td>Río de Janeiro, Brasil</td></tr>
+        <tr><td>Capacidad</td><td>78,000+</td></tr>
+        <tr><td>Inauguración</td><td>1950</td></tr>
+        <tr><td>Clubes</td><td>Flamengo, Fluminense (eventualmente)</td></tr>
+      </tbody>
+    </table>
+
+    <p>El Maracaná es mucho más que un estadio. Es parte del alma del fútbol brasileño y del deporte mundial. Cada rincón cuenta una historia de gloria, pasión y cultura futbolera.</p>
+
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ltuh5zDgT7A" title="Historia del Maracaná" allowfullscreen class="my-4"></iframe>
+  </main>
+
+  <footer class="container mt-5">
+    <hr>
+    <p class="float-end"><a href="#">Volver arriba</a></p>
+    <p>&copy; 2025 FIFA Fan Web &middot; <a href="#">Privacidad</a> &middot; <a href="#">Términos</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
