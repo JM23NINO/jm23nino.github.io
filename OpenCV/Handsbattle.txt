@@ -1,0 +1,228 @@
+#include <opencv2/opencv.hpp>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <thread>
+#include <chrono>
+#include <cstdio>
+
+using namespace cv;
+using namespace std;
+
+// Constantes del juego: nombres y códigos de las armas
+const string WEAPONS[3] = { "Quick Sword", "Double Daggers", "Great Shield" };
+const string WEAPON_CODES[3] = { "sword", "daggers", "shield" };
+
+/**
+ * Encuentra el contorno de mayor área en una lista de contornos.
+ * Se asume que ese contorno es la mano.
+ */
+vector<Point> findMaxContour(vector<vector<Point>>& contours) {
+    double maxArea = 0;
+    vector<Point> maxContour;
+    for (const auto& contour : contours) {
+        double area = contourArea(contour);
+        if (area > maxArea) {
+            maxArea = area;
+            maxContour = contour;
+        }
+    }
+    return maxContour;
+}
+
+/**
+ * Detecta el arma (gesto) seleccionada basada en el número de dedos levantados.
+ * Devuelve un string con el código del arma: "sword", "daggers", "shield" o "unknown".
+ */
+string detectWeapon(Mat frame) {
+    Mat gray, blurred, thresholded;
+
+    // Conversión a escala de grises y preprocesamiento
+    cvtColor(frame, gray, COLOR_BGR2GRAY);
+    GaussianBlur(gray, blurred, Size(9, 9), 0);
+    threshold(blurred, thresholded, 100, 255, THRESH_BINARY_INV);
+
+    // Buscar contornos en la imagen binaria
+    vector<vector<Point>> contours;
+    findContours(thresholded, contours, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+
+    if (contours.empty()) return "unknown";
+    vector<Point> handContour = findMaxContour(contours);
+    if (handContour.empty()) return "unknown";
+
+    // Encontrar el casco convexo (convex hull) y sus defectos (convexity defects)
+    vector<int> hull;
+    vector<Vec4i> defects;
+    convexHull(handContour, hull, false, false);
+
+    if (hull.size() > 3) {
+        convexityDefects(handContour, hull, defects);
+    }
+
+    // Contar defectos con cierta profundidad y ángulo pequeño para estimar número de dedos
+    int fingerCount = 0;
+    for (const auto& defect : defects) {
+        float depth = defect[3] / 256.0f;
+        if (depth > 20) {
+            Point start = handContour[defect[0]];
+            Point end = handContour[defect[1]];
+            Point farPt = handContour[defect[2]];
+
+            double a = norm(end - start);
+            double b = norm(farPt - start);
+            double c = norm(farPt - end);
+            double angle = acos((b * b + c * c - a * a) / (2 * b * c)) * 180 / CV_PI;
+
+            if (angle < 90) {
+                fingerCount++;
+            }
+        }
+    }
+
+    int totalFingers = fingerCount + 1; // El defecto es uno menos que el número de dedos
+
+    // Clasificación basada en el número de dedos
+    if (totalFingers == 1) return "sword";
+    else if (totalFingers == 2) return "daggers";
+    else if (totalFingers >= 4) return "shield";
+
+    return "unknown";
+}
+
+/**
+ * Determina el ganador de una ronda.
+ * Devuelve:
+ * - 1 si gana el jugador 1,
+ * - 2 si gana el jugador 2,
+ * - 0 si hay empate,
+ * - -1 si alguno no hizo un gesto válido.
+ */
+int determineWinner(const string& weapon1, const string& weapon2) {
+    if (weapon1 == "unknown" || weapon2 == "unknown") return -1;
+    if (weapon1 == weapon2) return 0;
+
+    if ((weapon1 == "sword" && weapon2 == "daggers") ||
+        (weapon1 == "daggers" && weapon2 == "shield") ||
+        (weapon1 == "shield" && weapon2 == "sword")) {
+        return 1;
+    }
+
+    return 2;
+}
+
+/**
+ * Convierte el código de arma a su nombre en texto legible para mostrarlo en pantalla.
+ */
+string weaponCodeToName(const string& weaponCode) {
+    if (weaponCode == "sword") return WEAPONS[0];
+    if (weaponCode == "daggers") return WEAPONS[1];
+    if (weaponCode == "shield") return WEAPONS[2];
+    return "Unknown";
+}
+
+/**
+ * Muestra instrucciones del juego por consola.
+ */
+void showInstructions() {
+    printf(" HAND WAR - INSTRUCTIONS \n");
+    printf("Weapon options:\n");
+    printf("1.  One finger - Quick Sword (beats Double Daggers)\n");
+    printf("2.  Two fingers - Double Daggers (beat Great Shield)\n");
+    printf("3.  Five fingers - Great Shield (beats Quick Sword)\n\n");
+    printf("First to win 3 rounds wins the game. Ready?\n\n");
+}
+
+int main() {
+    // Abre la cámara
+    VideoCapture cap(0);
+    if (!cap.isOpened()) {
+        fprintf(stderr, "Error: Could not open camera.\n");
+        return -1;
+    }
+
+    // Configura la resolución
+    cap.set(CAP_PROP_FRAME_WIDTH, 640);
+    cap.set(CAP_PROP_FRAME_HEIGHT, 480);
+
+    int p1Score = 0, p2Score = 0, round = 1;
+
+    showInstructions();  // Muestra instrucciones al inicio
+
+    // Bucle principal del juego
+    while (p1Score < 3 && p2Score < 3) {
+        Mat frame;
+        printf("\n Round %d:\n", round);
+
+        // Turno del Jugador 1
+        printf("Player 1, get ready to show your hand in 3 seconds.\n");
+        for (int i = 3; i > 0; --i) {
+            printf("%d...\n", i);
+            this_thread::sleep_for(chrono::seconds(1));
+        }
+        cap >> frame;
+        if (frame.empty()) {
+            fprintf(stderr, "Error: Failed to capture image for Player 1.\n");
+            continue;
+        }
+        imshow("Player 1", frame);  // Muestra la imagen en pantalla
+        waitKey(500);  // Espera breve para mostrar imagen
+        string p1Weapon = detectWeapon(frame);
+        printf("Player 1 chooses: %s\n", weaponCodeToName(p1Weapon).c_str());
+        destroyWindow("Player 1");
+
+        // Turno del Jugador 2
+        printf("\nPlayer 2, get ready to show your hand in 3 seconds.\n");
+        for (int i = 3; i > 0; --i) {
+            printf("%d...\n", i);
+            this_thread::sleep_for(chrono::seconds(1));
+        }
+        cap >> frame;
+        if (frame.empty()) {
+            fprintf(stderr, "Error: Failed to capture image for Player 2.\n");
+            continue;
+        }
+        imshow("Player 2", frame);
+        waitKey(500);
+        string p2Weapon = detectWeapon(frame);
+        printf("Player 2 chooses: %s\n", weaponCodeToName(p2Weapon).c_str());
+        destroyWindow("Player 2");
+
+        // Determinar resultado
+        int result = determineWinner(p1Weapon, p2Weapon);
+        if (result == 1) {
+            printf("Player 1 wins the round!\n");
+            p1Score++;
+        }
+        else if (result == 2) {
+            printf("Player 2 wins the round!\n");
+            p2Score++;
+        }
+        else if (result == 0) {
+            printf("Draw! No points awarded.\n");
+        }
+        else {
+            printf("Could not determine winner (gesture not recognized).\n");
+        }
+
+        printf("Score -> Player 1: %d | Player 2: %d\n", p1Score, p2Score);
+        round++;
+
+        if (p1Score < 3 && p2Score < 3) {
+            printf("Next round in 2 seconds...\n");
+            this_thread::sleep_for(chrono::seconds(2));
+        }
+    }
+
+    // Mostrar resultado final
+    printf("\n!!! GAME OVER !!!\n");
+    if (p1Score == 3) {
+        printf("PLAYER 1 IS THE WINNER!\n");
+    }
+    else {
+        printf("PLAYER 2 IS THE WINNER!\n");
+    }
+    printf("Final score: %d - %d\n", p1Score, p2Score);
+
+    cap.release();  // Libera la cámara
+    return 0;
+}
