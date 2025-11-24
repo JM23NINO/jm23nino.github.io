@@ -1,13 +1,139 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portafolio - Programación Web I</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<meta name="Autor" content="José Manuel Niño Ibarra">
-<meta name="Fecha" content="14 de Febrero de 2025">
-<meta name="Descripción" content="Portafolio de Programación Web I">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Programación Web I/II</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="Autor" content="José Manuel Niño Ibarra">
+    <meta name="Fecha" content="14 de Febrero de 2025">
+    <meta name="Descripción" content="Portafolio de Programación Web I y II">
+    <style>
+        /* Estilos generales del cuerpo */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6; /* Fondo gris claro suave */
+            color: #333; /* Color de texto oscuro */
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* Estilo del contenedor principal */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #ffffff; /* Fondo blanco para el contenido */
+            padding: 40px;
+            border-radius: 25px; /* Esquinas muy redondeadas (efecto circular) */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+        }
+
+        /* Estilo para títulos principales */
+        h1, h2 {
+            text-align: center;
+            color: #007bff; /* Color de acento azul */
+            margin-bottom: 5px;
+            border-bottom: 2px solid #e9ecef; /* Línea de separación suave */
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #343a40; /* Subtítulos en gris oscuro */
+            margin-top: 30px;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        /* Estilo del párrafo de la información del alumno */
+        .container > p {
+            text-align: center;
+            font-weight: bold;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+
+        /* Estilo para las listas principales (Unidad) */
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        ul > li {
+            background-color: #e6f0ff; /* Fondo muy claro para la unidad */
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 15px; /* Esquinas redondeadas para las secciones */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        ul > li:hover {
+            transform: translateY(-3px); /* Efecto de elevación al pasar el mouse */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Títulos de Unidad/Proyecto */
+        ul > li > strong {
+            display: block;
+            font-size: 1.3em;
+            color: #0056b3; /* Azul más oscuro para el título de la unidad */
+            margin-bottom: 10px;
+        }
+        
+        /* Estilo para las listas de actividades (ol) */
+        ol {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ol li {
+            margin-bottom: 8px;
+            padding: 5px 0;
+            border-bottom: 1px dotted #cce5ff;
+            list-style-type: decimal-leading-zero; /* Para un mejor orden visual */
+        }
+
+        ol li:last-child {
+            border-bottom: none;
+        }
+
+        /* Estilo de los enlaces (Link) */
+        a {
+            color: #28a745; /* Color de acento verde brillante para los links */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1e7e34; /* Verde más oscuro al pasar el mouse */
+            text-decoration: underline;
+        }
+
+        /* Estilo para el nombre de la actividad (i) */
+        i {
+            color: #6c757d;
+            font-style: normal;
+        }
+        
+        /* Estilo específico para el ítem de Proyecto */
+        ul > li:has(ul) {
+            background-color: #fff3e6; /* Un color distinto (naranja muy claro) para el proyecto */
+        }
+        
+        ul > li:has(ul) > strong {
+            color: #e96e00;
+        }
+
+    </style>
 </head>
 <body>
 <div class="container">
@@ -17,41 +143,41 @@
 <ul>
 <li><strong>Unidad No. 1</strong>
 <ol>
-  <li>Actividad No.1 (<i>Hola mundo</i>) <a href="parcial_1/Actividad1.html">Link</a></li>
-  <li>Actividad No.2 (<i>Títulos</i>) <a href="parcial_1/Actividad2.html">Link</a></li>
-  <li>Actividad No.2-1 (<i>Mapa de sitio</i>) <a href="parcial_1/Actividad2_1.html">Link</a></li>
-  <li>Actividad No.3 (<i>Párrafo</i>) <a href="parcial_1/Actividad3.html">Link</a></li>
-  <li>Actividad No.4 (<i>Listas I</i>) <a href="parcial_1/Actividad4.html">Link</a></li>
-  <li>Actividad No.4-1 (<i>Plan de estudios</i>) <a href="parcial_1/Actividad4_1.html">Link</a></li>
-  <li>Actividad No.5 (<i>Listas II</i>) <a href="parcial_1/Actividad5.html">Link</a></li>
-  <li>Actividad No.6 (<i>Widget</i>) <a href="parcial_1/Actividad6.html">Link</a></li>
-  <li>Actividad No.7 (<i>Enlaces</i>) <a href="parcial_1/Actividad7.html">Link</a></li>
-  <li>Actividad No.8 (<i>Imagenes</i>) <a href="parcial_1/Actividad8.html">Link</a></li>
-  <li>Actividad No.9 (<i>Formato</i>) <a href="parcial_1/Actividad9.html">Link</a></li>
-  <li>Actividad No.9_1 (<i>Word</i>) <a href="parcial_1/Actividad9_1.html">Link</a></li>
-  <li>Actividad No.10 (<i>Mapeo</i>) <a href="parcial_1/Actividad10.html">Link</a></li>
- </ol>
+  <li>Actividad No.1 (<i>Hola mundo</i>) <a href="parcial_1/Actividad1.html">Link</a></li>
+  <li>Actividad No.2 (<i>Títulos</i>) <a href="parcial_1/Actividad2.html">Link</a></li>
+  <li>Actividad No.2-1 (<i>Mapa de sitio</i>) <a href="parcial_1/Actividad2_1.html">Link</a></li>
+  <li>Actividad No.3 (<i>Párrafo</i>) <a href="parcial_1/Actividad3.html">Link</a></li>
+  <li>Actividad No.4 (<i>Listas I</i>) <a href="parcial_1/Actividad4.html">Link</a></li>
+  <li>Actividad No.4-1 (<i>Plan de estudios</i>) <a href="parcial_1/Actividad4_1.html">Link</a></li>
+  <li>Actividad No.5 (<i>Listas II</i>) <a href="parcial_1/Actividad5.html">Link</a></li>
+  <li>Actividad No.6 (<i>Widget</i>) <a href="parcial_1/Actividad6.html">Link</a></li>
+  <li>Actividad No.7 (<i>Enlaces</i>) <a href="parcial_1/Actividad7.html">Link</a></li>
+  <li>Actividad No.8 (<i>Imagenes</i>) <a href="parcial_1/Actividad8.html">Link</a></li>
+  <li>Actividad No.9 (<i>Formato</i>) <a href="parcial_1/Actividad9.html">Link</a></li>
+  <li>Actividad No.9_1 (<i>Word</i>) <a href="parcial_1/Actividad9_1.html">Link</a></li>
+  <li>Actividad No.10 (<i>Mapeo</i>) <a href="parcial_1/Actividad10.html">Link</a></li>
+ </ol>
 </li>
 
 <li><strong>Unidad No. 2</strong>
 <ol>
-  <li>Actividad No.1 (<i>Tablas</i>) <a href="parcial_2/Actividad1P2.html">Link</a></li>
-  <li>Actividad No.2 (<i>Tablas combinadas</i>) <a href="parcial_2/Actividad2_P2.html">Link</a></li>
-  <li>Actividad No.2-1 (<i>Estilo texto</i>) <a href="parcial_2/Actividad2.1_P2.html">Link</a></li>
-  <li>Actividad No.3 (<i>Párrafo</i>) <a href="parcial_2/Actividad3_P2.html">Link</a></li>
-  <li>Actividad No.4 (<i>Listas HTML</i>) <a href="parcial_2/Actividad4_P2.html">Link</a></li>
-  <li>Actividad No.4-1 (<i>act4</i>) <a href="parcial_2/Actividad4.1_P2.html">Link</a></li>
-  <li>Actividad No.4-2 (<i>act4-2</i>) <a href="parcial_2/Actividad4.2_P2.html">Link</a></li>
-  <li>Actividad No.5 (<i>Menu</i>) <a href="parcial_2/Actividad5_P2.html">Link</a></li>
-  <li>Actividad No.6 (<i>Boostrap</i>) <a href="Actividad6_P2.html">Link</a></li>
-  <li>Actividad No.7 (<i>Submenú de navegación</i>) <a href="parcial_2/Actividad7_P2.html">Link</a></li>
-  <li>Actividad No.7-1 (<i>Menú tipo Bootstrap</i>) <a href="parcial_2/Actividad7.1_P2.html">Link</a></li>
-  <li>Actividad No.8 (<i>Act8</i>) <a href="parcial_2/actividad8_P2.html">Link</a></li>
- </ol>
+  <li>Actividad No.1 (<i>Tablas</i>) <a href="parcial_2/Actividad1P2.html">Link</a></li>
+  <li>Actividad No.2 (<i>Tablas combinadas</i>) <a href="parcial_2/Actividad2_P2.html">Link</a></li>
+  <li>Actividad No.2-1 (<i>Estilo texto</i>) <a href="parcial_2/Actividad2.1_P2.html">Link</a></li>
+  <li>Actividad No.3 (<i>Párrafo</i>) <a href="parcial_2/Actividad3_P2.html">Link</a></li>
+  <li>Actividad No.4 (<i>Listas HTML</i>) <a href="parcial_2/Actividad4_P2.html">Link</a></li>
+  <li>Actividad No.4-1 (<i>act4</i>) <a href="parcial_2/Actividad4.1_P2.html">Link</a></li>
+  <li>Actividad No.4-2 (<i>act4-2</i>) <a href="parcial_2/Actividad4.2_P2.html">Link</a></li>
+  <li>Actividad No.5 (<i>Menu</i>) <a href="parcial_2/Actividad5_P2.html">Link</a></li>
+  <li>Actividad No.6 (<i>Boostrap</i>) <a href="Actividad6_P2.html">Link</a></li>
+  <li>Actividad No.7 (<i>Submenú de navegación</i>) <a href="parcial_2/Actividad7_P2.html">Link</a></li>
+  <li>Actividad No.7-1 (<i>Menú tipo Bootstrap</i>) <a href="parcial_2/Actividad7.1_P2.html">Link</a></li>
+  <li>Actividad No.8 (<i>Act8</i>) <a href="parcial_2/actividad8_P2.html">Link</a></li>
+ </ol>
 </li>
 <li><strong>Unidad No. 3</strong>
- <ol>
-    <li>Actividad No.1 (<i>Hola mundo</i>) <a href="parcial_3/Actividad1.html">Link</a></li>
+ <ol>
+    <li>Actividad No.1 (<i>Hola mundo</i>) <a href="parcial_3/Actividad1.html">Link</a></li>
 <li>Actividad No.2 (<i>Títulos</i>) <a href="parcial_3/Actividad2.html">Link</a></li>
 <li>Actividad No.3 (<i>Mapa de sitio</i>) <a href="parcial_3/Actividad3.html">Link</a></li>
 <li>Actividad No.3-1 (<i>Párrafo</i>) <a href="parcial_3/Actividad3-1.html">Link</a></li>
@@ -59,65 +185,67 @@
 <li>Actividad No.5 (<i>Plan de estudios</i>) <a href="parcial_3/Actividad5.html">Link</a></li>
 <li>Actividad No.6 (<i>Listas II</i>) <a href="parcial_3/Actividad6.html">Link</a></li>
 <li>Actividad No.7 (<i>Widget</i>) <a href="parcial_3/Actividad7.html">Link</a></li>
-  </ol>
- </li>
+  </ol>
+ </li>
 
- </ul>
- <li><strong>Proyecto</strong>
-        <ul>
-          <li><i>Fútbol Mundial</i> <a href="proyecto/mundial.html">Link</a></li>
-        </ul>
-      </li>
-</div>
+<li><strong>Proyecto</strong>
+        <ul>
+          <li><i>Fútbol Mundial</i> <a href="proyecto/mundial.html">Link</a></li>
+        </ul>
+      </li>
+</ul>
+<hr style="margin: 40px 0; border: 0; border-top: 1px solid #e9ecef;">
+
 <h2>Programación Web II</h2>
+<ul>
 <li><strong>Unidad No. 1</strong>
-  <ol>
-    <li>Actividad No.4 (<i>MODELADO E-R</i>) <a href="https://drive.google.com/file/d/13JarvQaym55_zcbJTUBJzF_2X10F4LZc/view?usp=sharing">Link</a></li>
-    <li>Actividad No.5 (<i>Modelado de base de datos carrera atlética</i>)<a href="https://drive.google.com/file/d/1InNm_iTCtfZn79J3cFFJUPo1f7XJk28K/view?usp=sharing">Link</a></li>
-    <li>Actividad No.6 (<i>Genera diagramas a partir de .sql</i>) <a href="https://drive.google.com/file/d/1ur0GWKFg_5ggfIMr0tEBKm-zNhRbLV2p/view?usp=sharing">Link</a></li>
-    <li>Actividad No.7 (<i>EJERCICIO INTEGRADOR SQL 1</i>)<a href="https://docs.google.com/document/d/1kewaOY883LMp4ukCWinKs-zQaCp_x614/edit?usp=sharing&ouid=103561252049049615208&rtpof=true&sd=true">Link</a></li>
-    <li>Actividad No.9 (<i>Ejercicios titanic</i>) <a href="https://drive.google.com/file/d/1250ReWF3h3Kh_2Qn8DH2SNGLly0rGCR0/view?usp=sharing">Link</a></li>
-    <li>Actividad No.10 (<i>Kardex</i>)<a href="https://drive.google.com/file/d/1QdSj2eqgNmb8kFwM0bRkNz7zizlw-K5r/view?usp=sharing">Link</a></li>
-  </ol>
+  <ol>
+    <li>Actividad No.4 (<i>MODELADO E-R</i>) <a href="https://drive.google.com/file/d/13JarvQaym55_zcbJTUBJzF_2X10F4LZc/view?usp=sharing">Link</a></li>
+    <li>Actividad No.5 (<i>Modelado de base de datos carrera atlética</i>)<a href="https://drive.google.com/file/d/1InNm_iTCtfZn79J3cFFJUPo1f7XJk28K/view?usp=sharing">Link</a></li>
+    <li>Actividad No.6 (<i>Genera diagramas a partir de .sql</i>) <a href="https://drive.google.com/file/d/1ur0GWKFg_5ggfIMr0tEBKm-zNhRbLV2p/view?usp=sharing">Link</a></li>
+    <li>Actividad No.7 (<i>EJERCICIO INTEGRADOR SQL 1</i>)<a href="https://docs.google.com/document/d/1kewaOY883LMp4ukCWinKs-zQaCp_x614/edit?usp=sharing&ouid=103561252049049615208&rtpof=true&sd=true">Link</a></li>
+    <li>Actividad No.9 (<i>Ejercicios titanic</i>) <a href="https://drive.google.com/file/d/1250ReWF3h3Kh_2Qn8DH2SNGLly0rGCR0/view?usp=sharing">Link</a></li>
+    <li>Actividad No.10 (<i>Kardex</i>)<a href="https://drive.google.com/file/d/1QdSj2eqgNmb8kFwM0bRkNz7zizlw-K5r/view?usp=sharing">Link</a></li>
+  </ol>
 </li>
 <li><strong>Unidad No. 2</strong>
 <ol>
-    <li>Actividad No.1 <a href="https://nino186425.atwebpages.com/Practica1/practica1.php">Link</a></li>
-    <li>Actividad No.2 <a href="https://nino186425.atwebpages.com/Practica1/practica2.php">Link</a></li>
-    <li>Actividad No.3 <a href="https://nino186425.atwebpages.com/Practica1/practica3.php">Link</a></li>
-    <li>Actividad No.4 <a href="https://nino186425.atwebpages.com/Practica1/practica4.php">Link</a></li>
-    <li>Actividad No.5 <a href="https://nino186425.atwebpages.com/Practica1/practica5.php">Link</a></li>
-    <li>Actividad No.6 <a href="https://nino186425.atwebpages.com/Practica1/practica6.php">Link</a></li>
-    <li>Actividad No.7 <a href="https://nino186425.atwebpages.com/Practica2/practica7_186425.php">Link</a></li>
-    <li>Actividad No.8 <a href="https://nino186425.atwebpages.com/Practica2/practica8_186425.php">Link</a></li>
-    <li>Actividad No.9 <a href="https://nino186425.atwebpages.com/Practica2/practica9_186425.php">Link</a></li>
-    <li>Actividad No.10 <a href="https://nino186425.atwebpages.com/Practica2/practica10_186425.php">Link</a></li>
-    <li>Actividad No.11 <a href="https://nino186425.atwebpages.com/Practica2/practica11_186425.php">Link</a></li>
-    <li>Actividad No.12 <a href="https://nino186425.atwebpages.com/Practica3/ejercicio12.php">Link</a></li>
-    <li>Actividad No.13 <a href="https://nino186425.atwebpages.com/Practica3/ejercicio13.php">Link</a></li>
-    <li>Actividad No.14 <a href="https://nino186425.atwebpages.com/Practica3/14_analisis.html">Link</a></li>
-    <li>Actividad No.15 <a href="https://nino186425.atwebpages.com/Practica3/15_analisis.html">Link</a></li>
-    <li>Actividad No.16 <a href="https://nino186425.atwebpages.com/Practica5/ejercicio16.php">Link</a></li>
-    <li>Actividad No.17 <a href="https://nino186425.atwebpages.com/Practica5/ejercicio17.php">Link</a></li>
-    <li>Actividad No.18 <a href="https://nino186425.atwebpages.com/Practica5/ejercicio18.php">Link</a></li>
-    <li>Actividad No.19 <a href="https://nino186425.atwebpages.com/Practica5/ejercicio19.php">Link</a></li>
-    <li>Actividad No.20 <a href="https://nino186425.atwebpages.com/Practica4/ejercicio20.php">Link</a></li>
-    <li>Actividad No.21 <a href="https://nino186425.atwebpages.com/Practica4/ejercicio21.php">Link</a></li>
-    <li>Actividad No.22 <a href="https://nino186425.atwebpages.com/Practica4/ejercicio22.php">Link</a></li>
-    <li>Actividad No.23 <a href="https://nino186425.atwebpages.com/Practica4/ejercicio23.php">Link</a></li>
-    <li>Actividad No.24 <a href="https://nino186425.atwebpages.com/Practica4/ejercicio24.php">Link</a></li>
-    <li>Actividad No.24 <a href="https://nino186425.atwebpages.com/Practica4/practica24b.php">Link</a></li>
-    <li>Actividad No.25 <a href="https://nino186425.atwebpages.com/Practica4/ejercicio25.php">Link</a></li>
-    <li>Actividad No.26 <a href="https://nino186425.atwebpages.com/Practica4/practica26.php">Link</a></li>
-    <li>Actividad No.26a <a href="https://nino186425.atwebpages.com/Practica4/practica26a.php">Link</a></li>
-    <li>Actividad No.26b <a href="https://nino186425.atwebpages.com/Practica4/practica26b.php">Link</a></li>
-    <li>Actividad No.26c <a href="https://nino186425.atwebpages.com/Practica4/practica26c.php">Link</a></li>
-    <li>Reto 4 (<i>Impresión pdf</i>) <a href="https://nino186425.atwebpages.com/Reto/test.html">Link</a></li>
-    <li>Reto 3 (<i>Nomofobia</i>) <a href="https://nino186425.atwebpages.com/Reto/test.html">Link</a></li>
-    <li>Examen practico (<i>Test modificado</i>) <a href="https://nino186425.atwebpages.com/examenpractico2/index.html">Link</a></li>
+    <li>Actividad No.1 <a href="https://nino186425.atwebpages.com/Practica1/practica1.php">Link</a></li>
+    <li>Actividad No.2 <a href="https://nino186425.atwebpages.com/Practica1/practica2.php">Link</a></li>
+    <li>Actividad No.3 <a href="https://nino186425.atwebpages.com/Practica1/practica3.php">Link</a></li>
+    <li>Actividad No.4 <a href="https://nino186425.atwebpages.com/Practica1/practica4.php">Link</a></li>
+    <li>Actividad No.5 <a href="https://nino186425.atwebpages.com/Practica1/practica5.php">Link</a></li>
+    <li>Actividad No.6 <a href="https://nino186425.atwebpages.com/Practica1/practica6.php">Link</a></li>
+    <li>Actividad No.7 <a href="https://nino186425.atwebpages.com/Practica2/practica7_186425.php">Link</a></li>
+    <li>Actividad No.8 <a href="https://nino186425.atwebpages.com/Practica2/practica8_186425.php">Link</a></li>
+    <li>Actividad No.9 <a href="https://nino186425.atwebpages.com/Practica2/practica9_186425.php">Link</a></li>
+    <li>Actividad No.10 <a href="https://nino186425.atwebpages.com/Practica2/practica10_186425.php">Link</a></li>
+    <li>Actividad No.11 <a href="https://nino186425.atwebpages.com/Practica2/practica11_186425.php">Link</a></li>
+    <li>Actividad No.12 <a href="https://nino186425.atwebpages.com/Practica3/ejercicio12.php">Link</a></li>
+    <li>Actividad No.13 <a href="https://nino186425.atwebpages.com/Practica3/ejercicio13.php">Link</a></li>
+    <li>Actividad No.14 <a href="https://nino186425.atwebpages.com/Practica3/14_analisis.html">Link</a></li>
+    <li>Actividad No.15 <a href="https://nino186425.atwebpages.com/Practica3/15_analisis.html">Link</a></li>
+    <li>Actividad No.16 <a href="https://nino186425.atwebpages.com/Practica5/ejercicio16.php">Link</a></li>
+    <li>Actividad No.17 <a href="https://nino186425.atwebpages.com/Practica5/ejercicio17.php">Link</a></li>
+    <li>Actividad No.18 <a href="https://nino186425.atwebpages.com/Practica5/ejercicio18.php">Link</a></li>
+    <li>Actividad No.19 <a href="https://nino186425.atwebpages.com/Practica5/ejercicio19.php">Link</a></li>
+    <li>Actividad No.20 <a href="https://nino186425.atwebpages.com/Practica4/ejercicio20.php">Link</a></li>
+    <li>Actividad No.21 <a href="https://nino186425.atwebpages.com/Practica4/ejercicio21.php">Link</a></li>
+    <li>Actividad No.22 <a href="https://nino186425.atwebpages.com/Practica4/ejercicio22.php">Link</a></li>
+    <li>Actividad No.23 <a href="https://nino186425.atwebpages.com/Practica4/ejercicio23.php">Link</a></li>
+    <li>Actividad No.24 <a href="https://nino186425.atwebpages.com/Practica4/ejercicio24.php">Link</a></li>
+    <li>Actividad No.24 <a href="https://nino186425.atwebpages.com/Practica4/practica24b.php">Link</a></li>
+    <li>Actividad No.25 <a href="https://nino186425.atwebpages.com/Practica4/ejercicio25.php">Link</a></li>
+    <li>Actividad No.26 <a href="https://nino186425.atwebpages.com/Practica4/practica26.php">Link</a></li>
+    <li>Actividad No.26a <a href="https://nino186425.atwebpages.com/Practica4/practica26a.php">Link</a></li>
+    <li>Actividad No.26b <a href="https://nino186425.atwebpages.com/Practica4/practica26b.php">Link</a></li>
+    <li>Actividad No.26c <a href="https://nino186425.atwebpages.com/Practica4/practica26c.php">Link</a></li>
+    <li>Reto 4 (<i>Impresión pdf</i>) <a href="https://nino186425.atwebpages.com/Reto/test.html">Link</a></li>
+    <li>Reto 3 (<i>Nomofobia</i>) <a href="https://nino186425.atwebpages.com/Reto/test.html">Link</a></li>
+    <li>Examen practico (<i>Test modificado</i>) <a href="https://nino186425.atwebpages.com/examenpractico2/index.html">Link</a></li>
 
-</li>
 </ol>
+</li>
 <li><strong>Unidad No. 3</strong>
 <ol>
 <li>Ejercicios 1 (<i>Cookies</i>) <a href="https://nino186425.atwebpages.com/Practica6/ejercicio1.php">Link</a></li>
@@ -125,9 +253,9 @@
 <li>Ejercicio 2 (<i>Nomofobia</i>) <a href="https://nino186425.atwebpages.com/Practica6/ejercicio1.php">Link</a></li>
 <li>Ejercicio 3 (<i>LOGIN DE USUARIO Y MEDALLERO OLIMPIADAS (XANTOLO)</i>) <a href="https://nino186425.atwebpages.com/Login/login.php">Link</a></li>
 <li>Ejercicio 4A (<i>Numeros aleatorios</i>) <a href="http://nino186425.atwebpages.com/parcial3/examples/aleatorio.php">Link</a></li>
-  <li>Ejercicio 4B (<i>Calificaciones</i>) <a href="http://nino186425.atwebpages.com/parcial3/examples/calificaciones.php">Link</a></li>
-  <li>Ejercicio 4C (<i>GRAFICA DE MEDALLAS DE LOS 10 MEJORES PAISES EN EL RANKING DEL MEDALLERO</i>) <a href="http://nino186425.atwebpages.com/parcial3/examples/pruebas.php">Link</a></li>
-  <li>Reto 1 (<i>Graficas</i>) <a href="http://nino186425.atwebpages.com/parcial3/examples/continentes.php">Link</a></li>
+  <li>Ejercicio 4B (<i>Calificaciones</i>) <a href="http://nino186425.atwebpages.com/parcial3/examples/calificaciones.php">Link</a></li>
+  <li>Ejercicio 4C (<i>GRAFICA DE MEDALLAS DE LOS 10 MEJORES PAISES EN EL RANKING DEL MEDALLERO</i>) <a href="http://nino186425.atwebpages.com/parcial3/examples/pruebas.php">Link</a></li>
+  <li>Reto 1 (<i>Graficas</i>) <a href="http://nino186425.atwebpages.com/parcial3/examples/continentes.php">Link</a></li>
 <li>Ejercicio 5 (<i>Avanzado Captcha</i>) <a href="http://nino186425.atwebpages.com/captcha/captcha.php">Link</a></li>
 <li>Ejercicio 6 (<i>-</i>) <a href="https://nino186425.atwebpages.com/parcial3/examples/ejercicio6.php">Link</a></li>
 <li>Ejercicio 7 (<i>-</i>) <a href="https://nino186425.atwebpages.com/parcial3/examples/ejercicio7.php">Link</a></li>
@@ -136,5 +264,7 @@
 <li>Examen practico <a href="https://nino186425.atwebpages.com/examenpractico3/index.php">Link</a></li>
 </ol>
 </li>
+</ul>
+</div>
 </body>
 </html>
