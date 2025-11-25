@@ -1,0 +1,74 @@
+// --- CONFIGURACIÓN DE PINES ---
+const int pinSensor = A0; // Tu cable con aluminio (flotando)
+
+// Pines del Semáforo
+const int ledVerde = 8;
+const int ledAmarillo = 9;
+const int ledRojo = 10;
+
+// Variable para guardar la lectura
+int lectura = 0;
+
+void setup() {
+  // Configurar LEDs como salida
+  pinMode(ledVerde, OUTPUT);
+  pinMode(ledAmarillo, OUTPUT);
+  pinMode(ledRojo, OUTPUT);
+
+  // Iniciar Monitor Serie (para ver números en la PC)
+  Serial.begin(9600);
+  
+  Serial.println("--- DETECTOR DE ESTATICA (CALIBRADO) ---");
+  delay(1000);
+}
+
+void loop() {
+  // 1. LEER EL SENSOR (Promedio para estabilidad)
+  // Tomamos 20 lecturas rápidas para suavizar el ruido eléctrico
+  long suma = 0;
+  for(int i=0; i<20; i++){
+    suma += analogRead(pinSensor);
+    delay(2);
+  }
+  lectura = suma / 20; 
+
+  // 2. MOSTRAR DATOS (Para que veas qué pasa)
+  Serial.print("Nivel de Campo: ");
+  Serial.print(lectura);
+  Serial.print("\t | ");
+
+  // 3. SEMÁFORO (Umbrales ajustados para ignorar ruido)
+
+  // --- ESTADO: REPOSO / RUIDO AMBIENTAL ---
+  // Subimos el límite a 700. Todo lo que sea menor a 700
+  // lo consideramos "ruido de la casa" y mostramos VERDE.
+  if (lectura < 700) {
+    Serial.println("Estado: Normal (Verde)");
+    
+    digitalWrite(ledVerde, HIGH);   // Enciende Verde
+    digitalWrite(ledAmarillo, LOW);
+    digitalWrite(ledRojo, LOW);
+  } 
+  
+  // --- ESTADO: DETECCIÓN MEDIA ---
+  // Si sube entre 700 y 950, algo se acerca.
+  else if (lectura >= 700 && lectura < 950) {
+    Serial.println("Estado: DETECTANDO (Amarillo)");
+    
+    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledAmarillo, HIGH); // Enciende Amarillo
+    digitalWrite(ledRojo, LOW);
+  } 
+  
+  // --- ESTADO: ALTO VOLTAJE ---
+  // Solo si supera 950 (casi el máximo de 1023) encendemos la alarma.
+  else if (lectura >= 950) {
+    Serial.println("!!! ESTATICA FUERTE !!! (Rojo)");
+    
+    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledAmarillo, LOW);
+    digitalWrite(ledRojo, HIGH);    // Enciende Rojo
+  }
+
+  delay(100); // Pausa breve
+}
