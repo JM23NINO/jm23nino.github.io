@@ -1,0 +1,48 @@
+module ALU3Bit (
+    input [2:0] A,
+    input [2:0] B,
+    input [1:0] ALUControl,
+    output [2:0] Result,
+    output N, // Negativ0
+    output Z, // Zero
+    output C, // Carry out
+    output V  // Overflow
+);
+
+    wire [2:0] B_mux;
+    wire [3:0] Sum_ext; // 4 bits para atrapar el acarreo de salida
+    wire [2:0] Sum;
+
+    // Multiplexor para B (Complemento a 2)
+    // Si ALUControl[0] es 1 (Resta), invertimos B. Si es 0 (Suma), pasa igual.
+    assign B_mux = ALUControl[0] ? ~B : B;
+
+    // Sumador 
+    assign Sum_ext = A + B_mux + ALUControl[0];
+    assign Sum = Sum_ext[2:0];
+
+    // 3. Multiplexor de Salida de la ALU
+    assign Result = (ALUControl == 2'b00) ? Sum :       // Add
+                    (ALUControl == 2'b01) ? Sum :       // Subtract
+                    (ALUControl == 2'b10) ? (A & B) :   // AND
+                    (ALUControl == 2'b11) ? (A | B) :   // OR
+                    3'b000;
+
+    
+  // N (Negativo): Es el bit más significativo del resultado final.
+    assign N = Result[2];
+    
+    // Z (Zero): Verdadero si todos los bits del resultado son cero.
+    assign Z = (Result == 3'b000);
+    
+  // C (Acarreo): Extraído del cuarto bit del sumador (Sum_ext[3]).
+    // Solo se debe activar en operaciones aritméticas (cuando ALUControl[1] es 0).
+    assign C = (ALUControl[1] == 1'b0) ? Sum_ext[3] : 1'b0;
+    
+    // V (Overflow): Compara los signos de las entradas frente al signo de la suma.
+    // Solo se evalúa en operaciones aritméticas (ALUControl[1] == 0).
+    assign V = (ALUControl[1] == 1'b0) ? 
+               ((~A[2] & ~B_mux[2] & Sum[2]) | (A[2] & B_mux[2] & ~Sum[2])) 
+               : 1'b0;
+
+endmodule
